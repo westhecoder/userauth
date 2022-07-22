@@ -2,7 +2,6 @@ const express = require('express')
 const session = require('express-session')
 const passport = require('passport')
 const routes = require('./routes')
-const connection = require('./config/database')
 
 const MongoStore = require('connect-mongo')
 
@@ -41,5 +40,5 @@ app.use(routes)
 
 const port = process.env.PORT || 5000
 app.listen(port, () => {
-    console.log('Server running now at:', port)
+    console.log((new Date().toLocaleTimeString()) , 'Server running at port: ' + port)
 })

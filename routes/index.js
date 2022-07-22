@@ -4,6 +4,7 @@ const genPassword = require('../lib/passwordUtils').genPassword
 const connection = require('../config/database');
 const isAdmin = require('./authMiddleware').isAdmin
 const isAuth = require('./authMiddleware').isAuth
+
 const User = connection.models.User;
 
 /**
